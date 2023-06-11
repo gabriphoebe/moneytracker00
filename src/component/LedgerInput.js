@@ -65,19 +65,19 @@ export default function LedgerInput() {
         console.log('value = '+event.target.value);
     }
 
-    function handleSubmit(event,{transDate, incExpValue, incExpType, account, amount, remarks}) {
+    function handleSubmit(event) {
         event.preventDefault();
         console.log(event);
         /*if(!transDate || !incExpValue || !incExpType|| !account || !amount) {    
             console.log('Please input all required fields first');
             return;
-        }
+        }*/
         
         var createdDateTime = new Date();
         const nextEntry = {id: uuidv4(), createDateTime: createdDateTime, transDate: transDate, incExpValue: incExpValue, incExpType: incExpType, account: account, amount: amount, remarks: remarks};
         const nextEntries = [...entries, nextEntry];
         setEntries(nextEntries);
-        console.log(nextEntries);*/
+        console.log(nextEntries);
 
 
 
